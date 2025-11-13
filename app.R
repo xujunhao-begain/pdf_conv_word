@@ -4,9 +4,9 @@ library(shinyjs)
 library(reticulate)
 library(shinyWidgets)
 
-# 指定 Python 路径（根据你的环境调整）
+# 指定 Python 路径
 #use_python("/opt/anaconda3/bin/python3")  # 本地Python路径
-use_python("/root/miniconda3/bin/python3") # 服务器Python路径
+Sys.setenv(RETICULATE_CONDA = "/root/miniconda3/bin/conda") # 服务器conda环境
 
 # ==== UI ====
 ui <- dashboardPage(
